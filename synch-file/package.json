@@ -1,19 +1,17 @@
 {
-  "name": "flag",
+  "name": "synch-file",
   "version": "1.0.0",
   "description": "",
-  "main": "flag.js",
+  "main": "file-io.js",
   "bin": {
-    "printFlag": "flag.js"
+    "printContents": "file-io.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "read-file": "node flag.js"
+    "read-file": "node file-io.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chalk": "^2.3.2"
-  }
+  "dependencies": {}
 }
