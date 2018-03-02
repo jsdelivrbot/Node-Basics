@@ -1,0 +1,20 @@
+{
+  "name": "cmd-line-args",
+  "version": "1.0.0",
+  "description": "",
+  "main": "args.js",
+  "bin": {
+    "addNums": "args.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "read-file": "node args.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "event-stream": "^3.3.4"
+  },
+  "devDependencies": {}
+  }
