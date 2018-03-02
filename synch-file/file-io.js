@@ -11,6 +11,7 @@ if (fileArg) {
   } catch (err) {
     console.log('Error', err);
   }
+  //if no input exit program
 } else {
   process.exit();
 }
