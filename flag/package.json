@@ -1,0 +1,19 @@
+{
+  "name": "flag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "flag.js",
+  "bin": {
+    "printFlag": "flag.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "read-file": "node args.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2"
+  }
+}
