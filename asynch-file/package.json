@@ -1,0 +1,17 @@
+{
+  "name": "asynch-file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "asynch.js",
+  "bin": {
+    "runAsynch": "asynch.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "read-file": "node asynch.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
