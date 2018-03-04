@@ -11,7 +11,6 @@ upperCase._transform = (buffer, _, cb) => {
 }
 
 writeStream._write = (buffer, _, next) => {
-  // writeFile('languages_caps.json', buffer, (err) => {
   writeFile(fileArg, buffer, (err) => {
     if(err) throw err;
     process.stdout.write('The data to write was added to the file!\n');
