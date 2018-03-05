@@ -3,12 +3,9 @@
 const { Database } = require('sqlite3').verbose();
 
 // Returns a new database object and automatically opens the database
-// Changes will persist once connection closes
-// Database method accepts a callback function for successful connection
 const db = new Database('employeedb.sqlite', () => console.log('Connected')); 
 
 // Passing in IF NOT EXISTS after CREATE TABLE will check to make sure there are no tables named 'employees'
-// If it does exist, this line will not run
 db.run('DROP TABLE IF EXISTS employeedb');
 db.run('CREATE TABLE IF NOT EXISTS employeeDb (id INTEGER PRIMARY KEY, firstName TEXT, lastName TEXT, jobTitle TEXT, address TEXT)');
 
@@ -22,7 +19,6 @@ const errorHandler = (err) => {
 //INSERT RECORDS 
 //import array of employee objects to dynamically add to db
 const employeeArray = require('./employees')
-// Insert each of the employee objects into the database.
 for(let emp of employeeArray){
   db.run(`INSERT INTO employeeDb VALUES (null,'${emp.firstName}','${emp.lastName}','${emp.jobTitle}','${emp.address}')`);
 }
@@ -40,7 +36,6 @@ db.all("SELECT * FROM employeeDb", (err, allRows) => {
 // query the database and console.log() each employees jobTitle.
 db.all("SELECT jobTitle FROM employeeDb", (err, allRows) => {
   errorHandler(err);
-  // allRows is an array containing each row from the query
   allRows.forEach(each => {
     console.log(`${each.jobTitle}`);
   });
@@ -49,7 +44,6 @@ db.all("SELECT jobTitle FROM employeeDb", (err, allRows) => {
 // query the database and console.log() each employeeDb firstName, lastName and address only
 db.all("SELECT firstName, lastName, address FROM employeeDb", (err, allRows) => {
   errorHandler(err);
-  // allRows is an array containing each row from the query
   allRows.forEach(each => {
     console.log(`'${each.firstName} ${each.lastName}' ${each.address}`);
   });
@@ -58,7 +52,6 @@ db.all("SELECT firstName, lastName, address FROM employeeDb", (err, allRows) => 
 // statement that returns all employees of a specified jobTitle
 db.all("SELECT * FROM employeeDb WHERE jobTitle='Engineer'", (err, allRows) => {
   errorHandler(err);
-  // allRows is an array containing each row from the query
   for(let row of allRows){
     console.log(`${row.id} '${row.firstName} ${row.lastName}' ${row.jobTitle} '${row.address}'`);
   }
