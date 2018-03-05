@@ -30,12 +30,20 @@ FROM Artist ar, Song s
 WHERE s.ArtistId = ar.ArtistId GROUP BY ar.ArtistName
 
 -- Write a SELECT statement to display how many songs exist for each genre. You'll need to use the COUNT() function and the GROUP BY keyword sequence.
-
+SELECT g.Label 'Genre', COUNT(s.GenreId) 'Song Count'
+FROM Genre g, Song s
+WHERE s.GenreId = g.GenreId
+GROUP BY g.GenreId
 
 -- Using MAX() function, write a select statement to find the album with the longest duration. The result should display the album title and the duration.
-
+SELECT a.Title 'Album', MAX(a.AlbumLength) 'Duration'
+FROM Album a
 
 -- Using MAX() function, write a select statement to find the song with the longest duration. The result should display the song title and the duration.
-
+SELECT s.Title 'Song', MAX(s.SongLength) 'Duration'
+FROM Song s
 
 -- Modify the previous query to also display the title of the album.
+SELECT s.Title 'Song', MAX(s.SongLength) 'Duration', a.Title 'Album'
+FROM Song s, Album a
+WHERE s.AlbumId = a.AlbumId
