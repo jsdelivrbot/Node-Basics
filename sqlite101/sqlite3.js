@@ -19,16 +19,9 @@ const errorHandler = (err) => {
     console.log(`Msg: ${err}`);
   };
 };
-//insert records 
-//create array of employee objects to dynamically add to db
-const employeeArray = [
-  {firstName: 'Fred', lastName: 'Smith', jobTitle: 'Cashier', address: '500 Somewhere Rd'},
-  {firstName: 'Glinda', lastName: 'Johnson', jobTitle: 'Sales Rep', address: '501 Somehow Lane'},
-  {firstName: 'Harry', lastName: 'Peters', jobTitle: 'Engineer', address: '502 Something St'},
-  {firstName: 'Ilda', lastName: 'Simpson', jobTitle: 'Accountant', address: '503 Some Lane'},
-  {firstName: 'John', lastName: 'Collins', jobTitle: 'Receptionist', address: '504 Somesome Ave'},
-  {firstName: 'Karen', lastName: 'Carson', jobTitle: 'Manager', address: '505 Road Blvd'},
-];
+//INSERT RECORDS 
+//import array of employee objects to dynamically add to db
+const employeeArray = require('./employees')
 // Insert each of the employee objects into the database.
 for(let emp of employeeArray){
   db.run(`INSERT INTO employeeDb VALUES (null,'${emp.firstName}','${emp.lastName}','${emp.jobTitle}','${emp.address}')`);
