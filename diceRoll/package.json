@@ -7,10 +7,14 @@
     "rollDice": "dice-roll/bin/rollDice"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -R list --watch",
     "read-file": "node dice-roll/bin/rollDice"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4"
+  }
 }
