@@ -1,5 +1,3 @@
-import { resolve } from 'dns';
-
 'use strict'; 
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('acme.sqlite');
@@ -43,8 +41,11 @@ module.exports.editCustomerFirstName = (newName, lastName) => {
   })
 }
 
-module.exports.deleteCustomer = () => {
+module.exports.deleteCustomerById = (id) => {
   return new Promise((resolve, reject) => {
-    
+    db.run(`DELETE FROM customers WHERE customer_id=${id}`, (err, data) => {
+      errorHandler(err);
+      resolve(data);
+    })
   })
 }

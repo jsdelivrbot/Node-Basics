@@ -1,5 +1,5 @@
 const { createTables } = require('../js/makeTable');
-const { getCustomers,addCustomer,editCustomerFirstName } = require('../js/customers');
+const { getCustomers,addCustomer,editCustomerFirstName,deleteCustomerById } = require('../js/customers');
 const { assert: { equal,isFunction,isObject,isArray,notEqual } } = require('chai');
 
 describe('read', () => {
@@ -56,7 +56,6 @@ describe('customers module', () => {
         done();
       })
     })
-
     it("should update a customer's information in the database", () => {
       editCustomerFirstName('Frank','Smith')
       .then(() => {
@@ -64,6 +63,29 @@ describe('customers module', () => {
         .then(data => {
           notEqual(data[0].first_name, 'Fred');
           equal(data[0].first_name, 'Frank');
+        })
+      })
+    })
+  })
+
+  describe('deleteCustomer()', () => {
+    beforeEach((done) => {
+      createTables()
+        .then(() => {
+          done();
+        })
+    })
+    it('should remove a customer from the database', () => {
+      //remove customer, then get customer list to confirm deleted
+      deleteCustomerById(3)
+      .then(data => {
+        getCustomers()
+        .then(data => {
+          let filteredArr = data.filter(customer => {
+            return customer.customer_id === 3;
+          });
+          //filtering by deleted id returns empty array
+          equal(filteredArr.length, 0);
         })
       })
     })
