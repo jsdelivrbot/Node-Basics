@@ -8,8 +8,8 @@ describe('parseArgs()', () => {
   });
 
   it('should separate 3 arguments into num1 num2 operator',() => {
-    let args = ['1', '+', '2'];
-    deepEqual(parseArgs(args),{num1: 1, num2: 2, operator: 'add'});
+    let args = ['1', 'x', '2'];
+    deepEqual(parseArgs(args),{num1: 1, num2: 2, operator: 'multiply'});
   })
 
   it(`should call printInstructions if number of arguments != 3,
