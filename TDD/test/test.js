@@ -27,6 +27,7 @@ describe('customers module', () => {
       street: '2700 Hug-a-cousin Lane',
       zip: '122333', phone: '111-000-1234',
     }
+    //destroy/create new database before each test
     beforeEach((done) => {
       createTables()
       .then(() => {
@@ -57,6 +58,7 @@ describe('customers module', () => {
       })
     })
     it("should update a customer's information in the database", () => {
+      //edit customer name then get data to confirm change
       editCustomerFirstName('Frank','Smith')
       .then(() => {
         getCustomers()
