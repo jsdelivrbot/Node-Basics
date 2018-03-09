@@ -12,15 +12,11 @@ describe('parseArgs()', () => {
     deepEqual(parseArgs(args),{num1: 1, num2: 2, operator: 'multiply'});
   })
 
-  it(`should call printInstructions if number of arguments != 3,
+  it(`should call printInstructions and return undefined if number of arguments != 3,
       OR if second argument is not an operator (+,-,/,*)`
       , () => {
-    equal(parseArgs([]), false);
-    equal(parseArgs(['1','plus','2']), false);
+    equal(parseArgs([]), undefined);
+    equal(parseArgs(['1','plus','2']), undefined);
   })
-  
-  // it('should ',() => {
-    
-  // })
 
 })
