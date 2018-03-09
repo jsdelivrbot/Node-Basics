@@ -7,18 +7,10 @@ module.exports.getChildren = () => {
     db.all(`SELECT * FROM children`, (err, allRows) => {
       if(err) { return reject(err) };
       resolve(allRows);
+      console.log(allRows);
     })
   })
 };
-
-module.exports.getToysdByName = (name) => {
-  return new Promise((resolve, reject) => {
-    db.all(`SELECT toy FROM children WHERE name = "${name}"`, (err,allRows) => {
-      if(err) { return reject(err) };
-      resolve(allRows);
-    })
-  })
-}
 
   module.exports.getChildById = (id) => {
   return new Promise((resolve, reject) => {

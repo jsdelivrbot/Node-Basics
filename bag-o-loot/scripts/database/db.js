@@ -6,7 +6,7 @@ const { createTables } = require('./makeTable');
   new sqlite3.Database('lootBag.sqlite', () => {
     createTables()
     .then((data) => {
-      console.log(data);
+      // console.log(data);
     })
     .catch(err => {
       console.log('OH SHIT!', err);
