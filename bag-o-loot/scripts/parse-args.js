@@ -15,7 +15,7 @@ module.exports = (array) => {
     instructions.task = array.includes('ls')?'getChildren' : printInstructions();
   } 
   else if (array.length === 2){
-    instructions.task = array.includes('ls')?'getToysByName' : array.includes('delivered')?'deliverToy' : printInstructions();
+    instructions.task = array.includes('ls')?'getToys' : array.includes('delivered')?'deliverToy' : printInstructions();
     instructions.name = array[1];
   }
   else { printInstructions() };

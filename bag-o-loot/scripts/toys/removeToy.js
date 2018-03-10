@@ -2,7 +2,7 @@
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('lootBag.sqlite');
 
-module.exports.removeToy = ({ name, toy }) => {
+module.exports = ({ name, toy }) => {
   return new Promise((resolve, reject) => {
     db.run(`DELETE FROM children 
     WHERE name = "${name}" AND toy = "${toy}"`

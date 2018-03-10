@@ -1,4 +1,4 @@
-const { getChildren } = require('../scripts/getChildren');
+const getChildren = require('../scripts/toys/getChildren');
 const { assert: { isObject, isArray,deepEqual }} = require('chai');
 
 describe('children module', () => {

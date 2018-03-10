@@ -1,7 +1,7 @@
 'use strict'; 
 const { createTables } = require('../scripts/database/makeTable');
-const { getChildById } = require('../scripts/getChildren');
-const { removeToy } = require('../scripts/toys/removeToy')
+const getChild = require('../scripts/toys/getChild');
+const removeToy = require('../scripts/toys/removeToy')
 const { assert: { equal,isObject,isArray,deepEqual,notEqual } } = require('chai');
 
 describe('removeToy module', () => {
@@ -23,7 +23,7 @@ describe('removeToy module', () => {
       return removeToy(badChild)
         .then((data) => {
           //requesting getChild by deleted id should return empty array
-          return getChildById(3)
+          return getChild(3)
             .then((data) => {
               equal(0, data.length);
             })

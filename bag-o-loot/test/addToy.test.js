@@ -1,7 +1,8 @@
 'use strict'; 
 const { createTables } = require('../scripts/database/makeTable');
-const { addToy,deliverToy } = require('../scripts/toys/addToy');
-const { getChildById } = require('../scripts/getChildren');
+const addToy = require('../scripts/toys/addToy');
+const deliverToy = require('../scripts/toys/deliverToy');
+const getChild = require('../scripts/toys/getChild');
 const { assert: { equal,isObject,isArray,deepEqual } } = require('chai');
 
 describe('addToy module', () => {
@@ -29,7 +30,7 @@ describe('addToy module', () => {
     it('should add a child and toy as a new row in the database', () => {
       return addToy(newChild)
         .then((data) => {
-          return getChildById(data.id)
+          return getChild(data.id)
           .then((data) => {
             deepEqual([data[0].name,data[0].toy],['Oswald','slinky']);
           })
@@ -54,7 +55,7 @@ describe('addToy module', () => {
       return deliverToy(delivery)
       .then(() => {
         //retrieving 'delivered' for updated row should match current date
-        return getChildById(2)
+        return getChild(2)
         .then(data => {
           deepEqual(data[0].delivered, date.toLocaleDateString());
         })
