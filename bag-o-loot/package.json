@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha -R list --watch"
+    "test": "mocha -R list --watch",
+    "build_db": "node scripts/database/db.js"
   },
   "keywords": [],
   "author": "",
