@@ -1,0 +1,60 @@
+{
+  "movies": [
+    {
+      "name": "Lady Bird",
+      "studio": "Movies R Us",
+      "genre": "comedy",
+      "inTheaters": 0,
+      "director_id": 3
+    },
+    {
+      "name": "The Fish That Saved Pittsburgh",
+      "studio": "Universal",
+      "genre": "sports comedy",
+      "inTheaters": 0,
+      "director_id": 5
+    },
+    {
+      "name": "Red Sparrow",
+      "studio": "Films-n-Stuff",
+      "genre": "drama",
+      "inTheaters": 1,
+      "director_id": 4
+    },
+    {
+      "name": "Black Panther",
+      "studio": "Marvel Studios",
+      "genre": "adventure",
+      "inTheaters": 1,
+      "director_id": 8
+    },
+    {
+      "name": "Raising Arizona",
+      "studio": "Paramount",
+      "genre": "comedy",
+      "inTheaters": 0,
+      "director_id": 4
+    },
+    {
+      "name": "The Room",
+      "studio": "Wiseau Pictures or Something",
+      "genre": "awful",
+      "inTheaters": 1,
+      "director_id": 1
+    },
+    {
+      "name": "Home Movies: 1978",
+      "studio": "Shepherd International",
+      "genre": "cringeworthy",
+      "inTheaters": 0,
+      "director_id": 2
+    },
+    {
+      "name": "Kung Fury",
+      "studio": "Netflix",
+      "genre": "drama",
+      "inTheaters": 0,
+      "director_id": 6
+    }
+  ]
+}
