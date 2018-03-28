@@ -165,12 +165,12 @@ LIMIT 3;
 
 -- Provide a query that shows the most purchased Media Type.
 SELECT me.Name AS 'Media_type', 
-SUM(inv.Total) AS 'TotalSales'
+COUNT(*) AS 'Purchases'
 FROM Invoice inv, Track tr, InvoiceLine, MediaType me
 WHERE inv.InvoiceId = InvoiceLine.InvoiceId
 AND InvoiceLine.TrackId = tr.TrackId
 AND tr.MediaTypeId = me.MediaTypeId
-GROUP BY Media_type ORDER BY TotalSales DESC
+GROUP BY Media_type ORDER BY Purchases DESC
 LIMIT 1;
 
 -- Provide a query that shows the number tracks purchased in all invoices that contain more than one genre.
