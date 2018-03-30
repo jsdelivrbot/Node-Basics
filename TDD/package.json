@@ -17,6 +17,9 @@
     "mocha": "^5.0.4"
   },
   "dependencies": {
-    "sqlite": "^2.9.1"
+    "express": "^4.16.3",
+    "prompt": "^1.0.0",
+    "sqlite": "^2.9.1",
+    "sqlite3": "^4.0.0"
   }
 }

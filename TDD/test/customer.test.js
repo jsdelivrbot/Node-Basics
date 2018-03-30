@@ -1,5 +1,5 @@
-const { createTables } = require('../js/makeTable');
-const { getCustomers,addCustomer,editCustomerFirstName,deleteCustomerById } = require('../js/customers');
+const { buildCustomers } = require('../js/db/customers');
+const { getCustomers,addCustomer,editCustomerFirstName,deleteCustomerById } = require('../js/models/Customer');
 const { assert: { equal,isFunction,isObject,isArray,notEqual } } = require('chai');
 
 describe('read', () => {
@@ -29,7 +29,7 @@ describe('customers module', () => {
     }
     //destroy/create new database before each test
     beforeEach((done) => {
-      createTables()
+      buildCustomers()
       .then(() => {
         done();
       })
@@ -52,7 +52,7 @@ describe('customers module', () => {
 
   describe('editCustomer()', () => {
     beforeEach((done) => {
-      createTables()
+      buildCustomers()
       .then(() => {
         done();
       })
@@ -72,7 +72,7 @@ describe('customers module', () => {
 
   describe('deleteCustomer()', () => {
     beforeEach((done) => {
-      createTables()
+      buildCustomers()
         .then(() => {
           done();
         })
