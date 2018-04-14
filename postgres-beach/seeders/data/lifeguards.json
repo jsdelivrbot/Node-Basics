@@ -1,0 +1,44 @@
+{
+  "lifeguards": [
+    {
+      "name": "Farrah Fawcett",
+      "rating": 6,
+      "beach_id": 3
+    },
+    {
+      "name": "Pamela Anderson",
+      "rating": 10,
+      "beach_id": 4
+    },
+    {
+      "name": "Lindsey Buckingham",
+      "rating": 8,
+      "beach_id": 5
+    },
+    {
+      "name": "The Hamburgler",
+      "rating": 2,
+      "beach_id": 1
+    },
+    {
+      "name": "Jessica Simpson",
+      "rating": 7,
+      "beach_id": 6
+    },
+    {
+      "name": "David Hasslehoff",
+      "rating": 10,
+      "beach_id": 6
+    },
+    {
+      "name": "Bob Marley",
+      "rating": 5,
+      "beach_id": 6
+    },
+    {
+      "name": "Spongebob Squarpants",
+      "rating": 1,
+      "beach_id": 4
+    }
+  ]
+}

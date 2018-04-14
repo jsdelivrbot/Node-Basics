@@ -1,0 +1,29 @@
+{
+  "castles": [
+    {
+      "description": "A big fish castle",
+      "tool_id": 1,
+      "beach_id": 1
+    },
+    {
+      "description": "Just a pile of sand, forgotten",
+      "tool_id": 3,
+      "beach_id": 2
+    },
+    {
+      "description": "A fully functional castle - an adult helped them",
+      "tool_id": 5,
+      "beach_id": 3
+    },
+    {
+      "description": "Ugly but functional",
+      "tool_id": 2,
+      "beach_id": 2
+    },
+    {
+      "description": "More of a sand igloo than a castle",
+      "tool_id": 4,
+      "beach_id": 6
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tools": [
+    {
+      "name": "shovel"
+    },
+    {
+      "name": "bucket"
+    },
+    {
+      "name": "crane"
+    },
+    {
+      "name": "hammer"
+    },
+    {
+      "name": "chainsaw"
+    }
+  ]
+}

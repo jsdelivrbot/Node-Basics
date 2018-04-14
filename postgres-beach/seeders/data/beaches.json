@@ -1,0 +1,44 @@
+{
+  "beaches": [
+    {
+      "name": "Jupiter",
+      "location": "Florida",
+      "sand_rating": 6
+    },
+    {
+      "name": "Myrtle",
+      "location": "Carolina",
+      "sand_rating": 5
+    },
+    {
+      "name": "Gulf Shores",
+      "location": "Alabama",
+      "sand_rating": 3
+    },
+    {
+      "name": "Santa Monica",
+      "location": "California",
+      "sand_rating": 10
+    },
+    {
+      "name": "Malibu",
+      "location": "California",
+      "sand_rating": 9
+    },
+    {
+      "name": "Seaside",
+      "location": "Oregon",
+      "sand_rating": 7
+    },
+    {
+      "name": "Cannon",
+      "location": "Oregon",
+      "sand_rating": 6
+    },
+    {
+      "name": "Olympic",
+      "location": "Washington",
+      "sand_rating": 1
+    }
+  ]
+}
