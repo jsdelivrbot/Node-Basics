@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'beach_id',
       onDelete: 'CASCADE'
     })
-    Sandcastle.belongsTo(models.Tool, {
-      foreignKey: 'tool_id',
-      onDelete: 'CASCADE'
+    Sandcastle.belongsToMany(models.Tool, {
+      as: 'Tools', 
+      through: 'castle_tools'
     })
   };
   return Sandcastle;

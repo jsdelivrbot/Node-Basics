@@ -7,9 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'tools', timestamps: false
   });
   Tool.associate = function(models) {
-    Tool.hasMany(models.Sandcastle, {
-      foreignKey: 'tool_id',
-      onDelete: 'CASCADE'
+    Tool.belongsToMany(models.Sandcastle, {
+      through: 'castle_tools'
     })
   };
   return Tool;
