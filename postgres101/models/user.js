@@ -7,11 +7,18 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false, tableName: "users"
   });
+
   User.associate = function(models) {
     User.belongsToMany(models.Show, {
       as: "Favorites",
       through: "users_favorites"
     });
   };
+
+  // create an instance method for interacting w/ individual entries
+  User.prototype.getFullName = function () {
+    return `${this.first_name} ${this.last_name}`
+  }
+  
   return User;
 };

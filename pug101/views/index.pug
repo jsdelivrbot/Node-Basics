@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(vharset="utf-8")
+    title Pug Title
+    include stylesheets.pug
+  body
+    header
+      h1.homeHeader#helloPug Hello Pug
+    section
+      h2 Pugs for sale
+      //- using data from js file
+      h2 #{subtitle}
+      h2= subtitle
+      h2= 2+2
+      //- run js wherever
+      - let jsAnywhere = "List some names here"
+
+      .names
+        h3= jsAnywhere
+        ul
+          each name in names
+            li Hello, #{name}
+              button.deleteName delete
+
+      //- <div class='dropdown'>
+      .dropdown
+        .btn.btn-danger.dropdown-toggle(role="button", data-toggle="dropdown" href="#")
+          | Dropdown stuff up in here
+          .caret.dropdown-caret
+      ul.dropdown-menu(role="menu", aria-labelledby="dlabel")
+        li
+          a(tabindex="-1", href="#") Action
+        li
+          a(tabindex="-1", href="#") Another Action
+        li
+          a(tabindex="-1", href="#") Some Action
+      block content
+    footer
+      p YOU WANT ONE
+
+    //- script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+    //-           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    //-           crossorigin="anonymous")
+    //- script(src="/bootstrap/js/bootsrap.min.js")
+    script(src="/client/js/front-end.js")
