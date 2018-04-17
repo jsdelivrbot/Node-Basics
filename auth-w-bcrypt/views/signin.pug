@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+  head
+    meta(vharset='utf-8')
+    title Login
+  body
+    p #{message}
+    h1 Login
+    form(action='/signin', method='POST')
+      input(type='text', name='email', placeholder='email')
+      input(type='password', name='password', placeholder='password')
+      button(type='submit') submit

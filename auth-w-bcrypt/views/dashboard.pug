@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  head
+    meta(vharset='utf-8')
+    title Home
+    //- include stylesheets.pug
+  body
+    header
+      h1.homeWelcome #{msg}
+      h2.homeHello Hello #{user.firstname} #{user.lastname}
+    section
+      h3 Your password is safe! TRUST US
+  
+      //- block content
